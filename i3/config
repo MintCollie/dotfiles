@@ -184,4 +184,3 @@ bar {
 
 #custom settings
 bindsym $mod+Shift+Escape exec i3lock
-test
