@@ -183,4 +183,37 @@ bar {
 
 
 #custom settings
+
+#Binds the i3lock program to windows shift escape
 bindsym $mod+Shift+Escape exec i3lock
+
+#i3gaps
+for_window [class=".*"] border pixel 0
+smart_gaps on
+smart_borders on
+
+#correct handeling of floating dialogues
+for_window [window_role="pop-up"] floating enable
+for_window [window_role="task_dialog"] floating enable
+
+#window opacity
+exec picom --config /home/mint/.config/picom/picom.conf -b
+
+#Sets desktop background with feh
+exec feh --bg-scale /home/mint/Photos/cherry-blossom-viewing-tokyo-1920×1080.jpg
+
+
+# >>> Plasma Integration <<<
+for_window [title="Desktop — Plasma"] kill; floating enable; border none
+for_window [class="plasmashell"] floating enable;
+for_window [class="Plasma"] floating enable; border none
+for_window [title="plasma-desktop"] floating enable; border none
+for_window [title="win7"] floating enable; border none
+for_window [class="krunner"] floating enable; border none
+for_window [class="Kmix"] floating enable; border none
+for_window [class="Klipper"] floating enable; border none
+for_window [class="Plasmoidviewer"] floating enable; border none
+for_window [class="(?i)*nextcloud*"] floating disable
+for_window [class="plasmashell" window_type="notification"] floating enable, border none, move right 700px, move down 450px, no_focus 
+
+
