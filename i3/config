@@ -185,7 +185,7 @@ bar {
 #custom settings
 
 #Binds the i3lock program to windows shift escape
-bindsym $mod+Shift+Escape exec i3lock
+bindsym $mod+Shift+Escape exec i3lock -i /home/mint/Photos/Lain-telephone-poles.png
 
 #i3gaps
 for_window [class=".*"] border pixel 0
@@ -200,7 +200,7 @@ for_window [window_role="task_dialog"] floating enable
 exec picom --config /home/mint/.config/picom/picom.conf -b
 
 #Sets desktop background with feh
-exec feh --bg-scale /home/mint/Photos/cherry-blossom-viewing-tokyo-1920×1080.jpg
+exec_always feh --bg-scale /home/mint/Photos/Lain-telephone-poles.jpg
 
 
 # >>> Plasma Integration <<<
